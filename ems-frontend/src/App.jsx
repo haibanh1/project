@@ -11,8 +11,8 @@ import RoomComponent from './components/Room/RoomComponent'
 import AddRoomComponent from './components/Room/AddRoomComponent'
 import AccompaniedServiceComponent from './components/AccompaniedService/AccompaniedServiceComponent'
 import AddOrUpdateAccompaniedServiceComponent from './components/AccompaniedService/AddOrUpdateAccompaniedServiceComponent'
-import Login from './components/AccompaniedService/example'
-import ShowRoomComponent from './components/Show/ShowRoomComponent'
+import LoginComponent from './components/Account/LoginComponent'
+
 function App() {
 
   return (
@@ -39,7 +39,7 @@ function App() {
               <Route path='/updateaccompaniedService/:id' element={<AddOrUpdateAccompaniedServiceComponent />} />
 
 
-              <Route path='/login' element={<ShowRoomComponent />} />
+              <Route path='/login' element={<LoginComponent/>} />
             </Routes>
           </div>
           <FooterComponent />
