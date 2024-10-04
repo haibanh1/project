@@ -1,0 +1,44 @@
+[
+  {
+    "idRoom": 1,
+    "roomName": "Deluxe Room",
+    "maximumNumberOfGuests": 4,
+    "note": "Sea view",
+    "imageUrl": "anh1.jpg"
+  },
+  {
+    "idRoom": 2,
+    "roomName": "Standard Room",
+    "maximumNumberOfGuests": 2,
+    "note": "Garden view",
+    "imageUrl": "anh2.jpg"
+  },
+  {
+    "idRoom": 3,
+    "roomName": "Executive Suite",
+    "maximumNumberOfGuests": 3,
+    "note": "City view",
+    "imageUrl": "anh3.jpg"
+  },
+  {
+    "idRoom": 4,
+    "roomName": "Single Room",
+    "maximumNumberOfGuests": 1,
+    "note": "Mountain view",
+    "imageUrl": "anh4.jpg"
+  },
+  {
+    "idRoom": 4,
+    "roomName": "Single Room",
+    "maximumNumberOfGuests": 1,
+    "note": "Mountain view",
+    "imageUrl": "anh4.jpg"
+  },
+  {
+    "idRoom": 4,
+    "roomName": "Single Room",
+    "maximumNumberOfGuests": 1,
+    "note": "Mountain view",
+    "imageUrl": "anh4.jpg"
+  }
+]
