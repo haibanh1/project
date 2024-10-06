@@ -15,16 +15,15 @@ import AccompaniedServiceComponent from './components/AccompaniedService/Accompa
 import AddOrUpdateAccompaniedServiceComponent from './components/AccompaniedService/AddOrUpdateAccompaniedServiceComponent'
 import LoginComponent from './components/Account/LoginComponent'
 import { useState } from 'react';
-import SignOut from './components/SignOut'
+
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false); // State để theo dõi trạng thái đăng nhập
   return (
     <>
       <BrowserRouter>
-        <div className="app-container">
+        <div className="app-container d-flex">
         {!isLoggedIn && <SignIn />} {/* Hiển thị FirstPageComponent nếu chưa đăng nhập */}
-        {isLoggedIn && <HeaderComponent />} {/* Hiển thị HeaderComponent nếu đã đăng nhập */}
-        {isLoggedIn && <SignOut />} {/* Hiển thị HeaderComponent nếu đã đăng nhập */}
+        {isLoggedIn && <HeaderComponent setIsLoggedIn={setIsLoggedIn}/>} {/* Hiển thị HeaderComponent nếu đã đăng nhập */}
           <div className="content">
             <Routes>
               <Route path='/' element={<NoItem />} />

@@ -10,8 +10,8 @@ const LoginComponent = ({ setIsLoggedIn }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (email === '' || password === '') {
-            setError('Vui lòng điền đầy đủ thông tin.');
-            return;
+            // setError('Vui lòng điền đầy đủ thông tin.');
+            // return;
         }
 
         // Giả sử đăng nhập thành công

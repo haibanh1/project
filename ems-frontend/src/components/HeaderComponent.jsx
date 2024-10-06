@@ -1,13 +1,17 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { Link } from 'react-router-dom';
-
-const HeaderComponent = () => {
+import PropTypes from 'prop-types'; // Import PropTypes
+const HeaderComponent = ({ setIsLoggedIn }) => {
+  const handleSignOut = () => {
+    setIsLoggedIn(false); // Cập nhật trạng thái đăng xuất
+   
+};
   return (
     <div>
       <header>
         <div className="container-fluid">
-          <div className="row">
+          <div className="row" >
             {/* Room Dropdown */}
             <div className="col-2">
               <div className="dropdown">
@@ -63,11 +67,28 @@ const HeaderComponent = () => {
                 </ul>
               </div>
             </div>
+             {/* Sign Out */}
+             <div className="col-6 d-flex justify-content-end">
+             <div className="container-fluid">
+                    <div className="row d-flex justify-content-end">
+                        {/* Thay thế dropdown bằng nút */}
+                        <div className="col-2">
+                            <Link to="/">
+                                <button className="btn btn-primary w-100" onClick={handleSignOut}>
+                                    Đăng xuất
+                                </button>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
           </div>
         </div>
       </header>
     </div>
   );
 };
-
+HeaderComponent.propTypes = {
+  setIsLoggedIn: PropTypes.func.isRequired, // setIsLoggedIn phải là một hàm
+};
 export default HeaderComponent;
