@@ -1,22 +1,25 @@
-// src/Login.js
-import  { useState } from 'react';
-
-const LoginComponent = () => {
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types'; // Import PropTypes
+const LoginComponent = ({ setIsLoggedIn }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Xử lý đăng nhập ở đây (gọi API hoặc xác thực)
         if (email === '' || password === '') {
-            setError('Vui lòng điền đầy đủ thông tin.');
-            return;
+            // setError('Vui lòng điền đầy đủ thông tin.');
+            // return;
         }
-        
+
         // Giả sử đăng nhập thành công
         console.log('Đăng nhập thành công với:', { email, password });
         setError('');
+        setIsLoggedIn(true); // Cập nhật trạng thái đăng nhập
+        // Chuyển hướng đến trang chính hoặc trang mong muốn
+        navigate('/'); // Hoặc đường dẫn bạn muốn
         // Reset form
         setEmail('');
         setPassword('');
@@ -52,7 +55,9 @@ const LoginComponent = () => {
         </div>
     );
 };
-
+LoginComponent.propTypes = {
+    setIsLoggedIn: PropTypes.func.isRequired, // setIsLoggedIn phải là một hàm
+};
 const styles = {
     container: {
         maxWidth: '400px',
